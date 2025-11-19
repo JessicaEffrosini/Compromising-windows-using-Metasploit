@@ -98,7 +98,7 @@ On kali/parrot give the command exploit
 
 To see a list of processes, at the meterpreter > prompt, execute this command:
 ps  ⇒ can see the fun.exe process running with pid 1156
-## OUTPUT:
+
 
 
 
@@ -107,22 +107,19 @@ To become more persistent, we'll migrate to a process that will last longer.
 Let's migrate to the winlogon process.
 At the meterpreter > prompt, execute this command:
 
-migrate -N explorer.exe
-## OUTPUT:
-
-
-at meterpreter > prompt, execute this command:
-netstat
-A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below.
+migrate -N explorer.exe at meterpreter > prompt, execute this command:
+netstat A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below.
 Notice the "PID/Program name" value for this connection, which is redacted 
 ## OUTPUT:
 
+<img width="798" height="457" alt="424630581-e61066d7-12fb-4942-9f01-3906941f7c47" src="https://github.com/user-attachments/assets/88ba6244-b34c-4503-a1fc-832c6f294b39" />
 
 
 Post Exploitation
 The target is now owned. Following are meterpreter commands for key capturing in the target machine
 keyscan_start	Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
 ## OUTPUT:
+<img width="157" height="29" alt="424630759-fd50817c-df2b-40e2-bcb3-920d2baa5da0" src="https://github.com/user-attachments/assets/251d89a5-8823-427b-a714-e2e7a033f204" />
 
 
 
@@ -130,6 +127,7 @@ keyscan_start	Begins capturing keys typed in the target. On the Windows target, 
 keyscan_dump	Shows the keystrokes captured so far
 ## OUTPUT:
 
+<img width="420" height="91" alt="424631195-a5ce96df-cd40-4772-b531-90cf2462d6bf" src="https://github.com/user-attachments/assets/26888ecf-eec1-4c34-8c3c-673969839951" />
 
 ## RESULT:
 The Metasploit framework is  used to compromise windows and is examined successfully.
